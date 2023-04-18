@@ -19,11 +19,11 @@ class addzakazik:
         if countDish == 5:
             countDish+=1
         for i in range(countDish):
-                Cleare()
+                os.system('cls')
                 nameDish = nameDish + (input("Введите название для своего оливье "))
                 vibrano = False
                 while vibrano==False:
-                    print("Выберите картошку:\n 1:Картошка фри: +20 рублей \n 2:Картошка вареная: +15 рублей")
+                    print("Выберите картошку:\n 1:Картошка фри: +20 рублей \n 2:Картошка вареная: +15 рублей \n 3:Без марковки")
                     potato = int(input())
                     match potato:
                         case 1: 
@@ -48,10 +48,12 @@ class addzakazik:
                                 price+=15       
                                 ingridupdate =table.ingridienticdobav(jjdict['PotatFrice'],jjdict['PotatoBoiled']-1,jjdict['CarrotsKorean'],jjdict['CarrotBoiled'],jjdict['SmokedSausage'],jjdict['DoctorSausage'],jjdict['Banduel'],jjdict['otIvanicha'],jjdict['EggsChiken'],jjdict['EggsQuail'])
                                 main.Ingridient.UpdateIngrid(ingridupdate)
-                                vibrano = True 
+                                vibrano = True
+                        case 3: 
+                            vibrano=True         
                 vibrano = False
                 while vibrano==False:   
-                    print("Выберите марковку:\n 1:Марковка по корейски: +30 рублей \n 2:Марковка вареная: +15 рублей")
+                    print("Выберите марковку:\n 1:Марковка по корейски: +30 рублей \n 2:Марковка вареная: +15 рублей \n 3:Без марковки")
                     potato = int(input())
                     match potato:
                         case 1: 
@@ -76,9 +78,11 @@ class addzakazik:
                                 ingridupdate =table.ingridienticdobav(jjdict['PotatFrice'],jjdict['PotatoBoiled'],jjdict['CarrotsKorean'],jjdict['CarrotBoiled']-1,jjdict['SmokedSausage'],jjdict['DoctorSausage'],jjdict['Banduel'],jjdict['otIvanicha'],jjdict['EggsChiken'],jjdict['EggsQuail'])
                                 main.Ingridient.UpdateIngrid(ingridupdate)
                                 vibrano = True 
+                        case 3: 
+                            vibrano=True
                 vibrano = False
                 while vibrano==False:
-                    print("Выберите колбасу:\n 1:Сырокопченая колбаса: +40 рублей \n 2:Доктораская колбаса: +10 рублей")
+                    print("Выберите колбасу:\n 1:Сырокопченая колбаса: +40 рублей \n 2:Доктораская колбаса: +10 рублей \n 3:Без марковки")
                     potato = int(input())
                     match potato:
                         case 1: 
@@ -103,9 +107,11 @@ class addzakazik:
                                 ingridupdate =table.ingridienticdobav(jjdict['PotatFrice'],jjdict['PotatoBoiled'],jjdict['CarrotsKorean'],jjdict['CarrotBoiled'],jjdict['SmokedSausage'],jjdict['DoctorSausage']-1,jjdict['Banduel'],jjdict['otIvanicha'],jjdict['EggsChiken'],jjdict['EggsQuail'])
                                 main.Ingridient.UpdateIngrid(ingridupdate)
                                 vibrano = True
+                        case 3: 
+                            vibrano=True
                 vibrano = False
                 while vibrano==False:                 
-                    print("Выберите горошек:\n 1:Бандюэль: +30 рублей \n 2:Горох от Иваныча: +5 рублей")
+                    print("Выберите горошек:\n 1:Бандюэль: +30 рублей \n 2:Горох от Иваныча: +5 рублей \n 3:Без марковки")
                     potato = int(input())
                     match potato:
                         case 1: 
@@ -130,9 +136,11 @@ class addzakazik:
                                 ingridupdate =table.ingridienticdobav(jjdict['PotatFrice'],jjdict['PotatoBoiled'],jjdict['CarrotsKorean'],jjdict['CarrotBoiled'],jjdict['SmokedSausage'],jjdict['DoctorSausage'],jjdict['Banduel'],jjdict['otIvanicha']-1,jjdict['EggsChiken'],jjdict['EggsQuail'])
                                 main.Ingridient.UpdateIngrid(ingridupdate)
                                 vibrano = True
+                        case 3: 
+                            vibrano=True
                 vibrano = False
                 while vibrano==False:    
-                    print("Выберите яйца:\n 1:Перепелиные: +20 рублей \n 2:Куриные: +10 рублей")
+                    print("Выберите яйца:\n 1:Перепелиные: +20 рублей \n 2:Куриные: +10 рублей \n 3:Без марковки")
                     potato = int(input())
                     match potato:
                         case 1: 
@@ -157,6 +165,8 @@ class addzakazik:
                                 ingridupdate =table.ingridienticdobav(jjdict['PotatFrice'],jjdict['PotatoBoiled'],jjdict['CarrotsKorean'],jjdict['CarrotBoiled'],jjdict['SmokedSausage'],jjdict['DoctorSausage'],jjdict['Banduel'],jjdict['otIvanicha'],jjdict['EggsChiken']-1,jjdict['EggsQuail'])
                                 main.Ingridient.UpdateIngrid(ingridupdate)
                                 vibrano = True
+                        case 3: 
+                            vibrano=True 
                 code = random.randint(1, 6)
                 priceDosntskidka +=price
                 nameAllDish= nameAllDish+ nameDish
