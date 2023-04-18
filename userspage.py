@@ -34,7 +34,7 @@ class gg1:
             print("3.Проверить карту лояльности.")
             print("4.Выйти на авторизацию.")
             dei = int(input("Введите цифру нужного действия "))
-            Cleare()
+            
             match dei:
                 case 1:
                     zakaz.addzakazik.sobrat(mail,id)
@@ -50,7 +50,7 @@ class gg1:
                 case 3:
                     print("Ваша карта имеет уровень: "+jdict['cardLoyalty']+"\n Вы потратили уже: "+  str(jdict['moneySpent']))
                 case 4:
-                    Cleare()
+                    
                     isSelected = True
                     
 # gg1.glavnayaUsersPage("onlidan545545@mail.ru")

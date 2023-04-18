@@ -26,14 +26,14 @@ class adm:
         userupdate = table.Users(mail,ffdict['password'],ffdict['role'],monyePlus, int(ffdict['moneySpent']),ffdict['cardLoyalty']) 
         main.UsersAdd.UpdateUser(id,userupdate)  
         while(isSelected==False):
-            Cleare()
+            
             print("\nВыберите действие:")
             print("1.Посмотреть историю пользователя.")
             print("2.Закупка товара.")
             print("3.Проверить карту клиента.")
             print("4.Выйти на авторизацию.")
             dei = int(input("Введите цифру нужного действия "))
-            Cleare()
+            
             match dei:
                 case 1:
                     usermail = input("Введите почту пользователя:")
